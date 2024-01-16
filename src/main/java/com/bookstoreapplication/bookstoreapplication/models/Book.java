@@ -1,13 +1,15 @@
 package com.bookstoreapplication.bookstoreapplication.models;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 @Data
+@Entity
+@Table(name = "Books")
+
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private long id;
     private String name;
     private float price;

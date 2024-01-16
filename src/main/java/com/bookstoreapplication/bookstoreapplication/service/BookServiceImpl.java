@@ -2,9 +2,10 @@ package com.bookstoreapplication.bookstoreapplication.service;
 
 import com.bookstoreapplication.bookstoreapplication.models.Book;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 @Slf4j
 public class BookServiceImpl implements BookService {
     @Override
@@ -29,8 +30,5 @@ public class BookServiceImpl implements BookService {
         return book;
     }
 
-    @Override
-    public Book getBookById(long id) {
-        return new id;
-    }
+
 }

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public interface BookService {
- public Book getBookById(long id) ;
+
 
 
  public Book updateUser(long id, Book updatedUser) ;

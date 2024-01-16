@@ -7,6 +7,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/books")
 public class BookController {
+
     @Autowired
     private BookService bookService;
 
@@ -18,11 +19,7 @@ public class BookController {
     public List<Book> getBooks() {
         return bookService.getBooks();
     }
-    @GetMapping
-    public Book getBookById(@PathVariable("id") long id) {
-        Book book = BookService.getBookById(id);
-        return book;
-    }
+
     @PutMapping("/{id}")
     public Book updateUser(@PathVariable long id, @RequestBody Book book) {
         return bookService.updateUser(id, book);

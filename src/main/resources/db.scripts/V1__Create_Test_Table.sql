@@ -1,0 +1,1 @@
+create table Books (id bigint(20),PRICE FLOAT(20), NAME varchar(45));

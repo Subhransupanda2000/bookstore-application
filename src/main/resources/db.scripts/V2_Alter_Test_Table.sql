@@ -1,2 +1,2 @@
-INSERT INTO Books (ID, PRICE,NAME) VALUES (1,25,'MAX');
-select * from Books;
+alter table Books
+add column publisher varchar(20);

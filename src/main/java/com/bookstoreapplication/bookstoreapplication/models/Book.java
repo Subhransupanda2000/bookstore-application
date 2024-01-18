@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class Book {
-@Id
+
     private Long id;
     private String name;
     private Float price;

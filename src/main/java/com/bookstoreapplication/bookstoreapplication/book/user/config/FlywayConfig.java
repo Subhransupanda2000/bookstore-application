@@ -1,4 +1,4 @@
-package com.bookstoreapplication.bookstoreapplication.config;
+package com.bookstoreapplication.bookstoreapplication.book.user.config;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
-package com.bookstoreapplication.bookstoreapplication.user.cart.cartservice;
+package com.bookstoreapplication.bookstoreapplication.service;
 
-import com.bookstoreapplication.bookstoreapplication.user.cart.models.Cart;
+import com.bookstoreapplication.bookstoreapplication.models.Cart;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 public interface CartService {
 
 
-  public   List<Cart> getCartList();
+
 
 public   Cart getCartById(long cartItemId);
 

@@ -1,17 +1,15 @@
-package com.bookstoreapplication.bookstoreapplication.user.cart.cartservice;
-import com.bookstoreapplication.bookstoreapplication.user.cart.models.Cart;
+package com.bookstoreapplication.bookstoreapplication.service.serviceImpl;
+import com.bookstoreapplication.bookstoreapplication.models.Cart;
+import com.bookstoreapplication.bookstoreapplication.service.CartService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Slf4j
 @Service
-public class CartServiceImpl implements CartService{
+public class CartServiceImpl implements CartService {
 
 
-    @Override
-    public List<Cart> getCartList() {
-        return getCartList();
-    }
+
 
     @Override
     public Cart getCartById(long cartItemId) {

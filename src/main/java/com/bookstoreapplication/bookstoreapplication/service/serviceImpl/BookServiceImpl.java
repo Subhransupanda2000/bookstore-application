@@ -1,6 +1,7 @@
-package com.bookstoreapplication.bookstoreapplication.service;
+package com.bookstoreapplication.bookstoreapplication.service.serviceImpl;
 
 import com.bookstoreapplication.bookstoreapplication.models.Book;
+import com.bookstoreapplication.bookstoreapplication.service.BookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import java.util.*;

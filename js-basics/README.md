@@ -35,10 +35,13 @@ The object data type can contain:
 }
 
 ex:
+```
 function myFunction() {
   alert("Hello World!");
 }
 # js Object:
+```
+```
 let car = "Fiat";
 const car = {type:"Fiat", model:"500", color:"white"};
 * Acessing object properties:
@@ -52,6 +55,7 @@ const car = {type:"Fiat", model:"500", color:"white"};
     return this.firstName + " " + this.lastName;
   }
 };
+```
 name = person.fullName();
 # Control Statement
 If Statement
@@ -59,11 +63,14 @@ Using If-Else Statement
 Using Switch Statement
 Using the Ternary Operator (Conditional Operator)
 Using For loop
+```
 * if ( condition_is_given_here ) {
     // If the condition is met, 
     //the code  will get executed.
 }
+```
 # switch:
+```
 let num = 5;
  
 switch (num) {
@@ -79,18 +86,23 @@ switch (num) {
     default:
         console.log("Number is greater than 2.");
 };
+```
 # for loop
+```
 for (let i = 0; i <= 10; i++) {
   if (i % 2 === 0) {
     console.log(i);
   }
 };
+```
 # Arrays
 JavaScript Array is used to store multiple elements in a single variable. It can hold various data types, including numbers, strings, objects, and even other arrays. It is often used when we want to store a list of elements and access them by a single variable.
 ex:
+```
 let courses = ["HTML", "CSS", "JavaScript", "React"]; 
 let newArray = [];  
 courses.forEach(function (course) { 
 	newArray.push(course); 
 }); 
-console.log(newArray); 
+console.log(newArray);
+```

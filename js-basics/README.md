@@ -30,9 +30,11 @@ The object data type can contain:
    Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
    The parentheses may include parameter names separated by commas:
    (parameter1, parameter2, ...)
+   ```
    function myFunction(p1, p2) {
   return p1 * p2
 }
+```
 
 ex:
 ```
@@ -106,3 +108,25 @@ courses.forEach(function (course) {
 }); 
 console.log(newArray);
 ```
+let x = 10;
+
+if (x > 0) {
+    console.log("x is positive");
+}
+
+if (x > 0) {
+    console.log("x is positive");
+} else {
+    console.log("x is either zero or negative");
+}
+
+if (x > 0) {
+    console.log("x is positive");
+} else if (x === 0) {
+    console.log("x is zero");
+} else {
+    console.log("x is negative");
+}
+
+```
+

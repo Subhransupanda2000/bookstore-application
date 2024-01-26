@@ -57,8 +57,9 @@ const car = {type:"Fiat", model:"500", color:"white"};
     return this.firstName + " " + this.lastName;
   }
 };
-```
 name = person.fullName();
+```
+```
 # Control Statement
 If Statement
 Using If-Else Statement
@@ -101,12 +102,14 @@ for (let i = 0; i <= 10; i++) {
 JavaScript Array is used to store multiple elements in a single variable. It can hold various data types, including numbers, strings, objects, and even other arrays. It is often used when we want to store a list of elements and access them by a single variable.
 ex:
 ```
+```
 let courses = ["HTML", "CSS", "JavaScript", "React"]; 
 let newArray = [];  
 courses.forEach(function (course) { 
 	newArray.push(course); 
 }); 
 console.log(newArray);
+```
 ```
 let x = 10;
 
@@ -152,31 +155,43 @@ for (let i = 1; i <= 5; i++) {
     console.log(i);
 }
 ```
-```
+
 # ES6
 * Arrow function:
+```
   const x = (x, y) => x * y;
+  ```
 * The spread operator:
+```
   const q1 = ["Jan", "Feb", "Mar"];
 const q2 = ["Apr", "May", "Jun"];
 const q3 = ["Jul", "Aug", "Sep"];
 const q4 = ["Oct", "Nov", "May"];
 
-const year = [...q1, ...q2, ...q3, ...q4]; 
+const year = [...q1, ...q2, ...q3, ...q4];
+```
+
 * For/of loop
+  
   const cars = ["BMW", "Volvo", "Mini"];
 let text = "";
 
 for (let x of cars) {
   text += x + " ";
 }
+
+
 * map object:
+  ```
+
 const fruits = new Map([
 ["apples", 500],
 ["bananas", 300],
 ["oranges", 200]
 ]);
+```
 * set object:
+```
   const letters = new Set();
 letters.add("a");
 letters.add("b");
@@ -230,12 +245,15 @@ const containsWord = sentence.includes('fox');
 
 console.log(containsWord); // Output: true
 * String.startwith()
+  ```
 const greeting = 'Hello, world!';
 
 const startsWithHello = greeting.startsWith('Hello');
 
 console.log(startsWithHello); // Output: true
+```
 * string.endwith()
+```
 const fileName = 'script.js';
 
 const endsWithJs = fileName.endsWith('.js');

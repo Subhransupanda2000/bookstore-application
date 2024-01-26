@@ -30,20 +30,16 @@ The object data type can contain:
    Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
    The parentheses may include parameter names separated by commas:
    (parameter1, parameter2, ...)
-   ```
    function myFunction(p1, p2) {
-  return p1 * p2
+    return p1 * p2
 }
-```
-
 ex:
-```
 function myFunction() {
   alert("Hello World!");
 }
+
 # js Object:
-```
-```
+
 let car = "Fiat";
 const car = {type:"Fiat", model:"500", color:"white"};
 * Acessing object properties:
@@ -58,8 +54,6 @@ const car = {type:"Fiat", model:"500", color:"white"};
   }
 };
 name = person.fullName();
-```
-```
 # Control Statement
 If Statement
 Using If-Else Statement
@@ -101,18 +95,15 @@ for (let i = 0; i <= 10; i++) {
 # Arrays
 JavaScript Array is used to store multiple elements in a single variable. It can hold various data types, including numbers, strings, objects, and even other arrays. It is often used when we want to store a list of elements and access them by a single variable.
 ex:
-```
+
 ```
 let courses = ["HTML", "CSS", "JavaScript", "React"]; 
 let newArray = [];  
 courses.forEach(function (course) { 
 	newArray.push(course); 
-}); 
+});
 console.log(newArray);
-```
-```
 let x = 10;
-
 if (x > 0) {
     console.log("x is positive");
 }
@@ -133,8 +124,9 @@ if (x > 0) {
 
 ```
 
-```
+
 # Break:
+```
 for (let i = 1; i <= 5; i++) {
     console.log(i);
 
@@ -172,6 +164,7 @@ const year = [...q1, ...q2, ...q3, ...q4];
 ```
 
 * For/of loop
+ ```
   
   const cars = ["BMW", "Volvo", "Mini"];
 let text = "";
@@ -179,23 +172,25 @@ let text = "";
 for (let x of cars) {
   text += x + " ";
 }
+```
 
 
 * map object:
-  ```
+  
 
 const fruits = new Map([
 ["apples", 500],
 ["bananas", 300],
 ["oranges", 200]
 ]);
-```
+
 * set object:
-```
+
   const letters = new Set();
 letters.add("a");
 letters.add("b");
 letters.add("c");
+
 * modules:
   import message from "./message.js";
 * object entries:
@@ -239,19 +234,23 @@ const index = numbers.findIndex(num => num > 25);
 
 console.log(index); // Output: 2 (index of the first element greater than 25)
 * string.includes()
+  
 const sentence = 'The quick brown fox jumps over the lazy dog';
 
 const containsWord = sentence.includes('fox');
 
 console.log(containsWord); // Output: true
+
 * String.startwith()
-  ```
+ ```
+  
 const greeting = 'Hello, world!';
 
 const startsWithHello = greeting.startsWith('Hello');
 
 console.log(startsWithHello); // Output: true
 ```
+
 * string.endwith()
 ```
 const fileName = 'script.js';

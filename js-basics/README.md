@@ -176,39 +176,49 @@ for (let x of cars) {
 
 
 * map object:
-  
-
+```
 const fruits = new Map([
 ["apples", 500],
 ["bananas", 300],
 ["oranges", 200]
 ]);
+```
 
 * set object:
-
+```
   const letters = new Set();
 letters.add("a");
 letters.add("b");
 letters.add("c");
+```
 
 * modules:
+  ```
   import message from "./message.js";
+  ```
 * object entries:
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-const f = fruits.entries();
-
-for (let x of f) {
-}
+  ```
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  const f = fruits.entries();
+  for (let x of f) {
+  }
 * isfinite():
 * isNaN();
+```
 isFinite(10/0);       // returns false
 isFinite(10/1);
 isNaN("helloworld"); //return true
+```
 * new integer method:
+```
 Number.isInteger(10);
+```
 *New number properties
+```
 let x = Number.MIN_SAFE_INTEGER;
+```
 * Array.From():
+```
 // Example 1: Converting a string to an array of characters
 const str = 'Hello';
 const charArray = Array.from(str);
@@ -221,25 +231,32 @@ const keysIterator = fruits.keys();
 for (const key of keysIterator) {
     console.log(key); 
 }
+```
 * Array.find()
+```
 const numbers = [10, 20, 30, 40, 50];
 
 const found = numbers.find(num => num > 25);
 
 console.log(found); // Output: 30
+```
 * array.findIndex()
+```
 const numbers = [10, 20, 30, 40, 50];
 
 const index = numbers.findIndex(num => num > 25);
 
 console.log(index); // Output: 2 (index of the first element greater than 25)
+```
 * string.includes()
+```
   
 const sentence = 'The quick brown fox jumps over the lazy dog';
 
 const containsWord = sentence.includes('fox');
 
 console.log(containsWord); // Output: true
+```
 
 * String.startwith()
  ```

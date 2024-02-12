@@ -39,15 +39,15 @@
 ```
      List<CartItem> cartItems = new ArrayList<>();
 ```
-    // Ite will create a empty arraylist of cartitem.
-```
+//Ite will create a empty arraylist of cartitem.
 
+```
     for (CartItemEntity entity : cartItemEntities) {
       CatalogItem catalogItem = catalogItemService.findById(entity.getCatalogItemId());
       cartItems.add(new CartItem().fromEntity(entity, catalogItem));
     }
 ```
-      //this is a  for each loop which is iterate CartItemEntities. using findbyid we will get catalogitemid and store into catalogItem.
+//this is a  for each loop which is iterate CartItemEntities. using findbyid we will get catalogitemid and store into catalogItem.
 
 ```
     Double buyItemsTotalPrice = cartItems.stream()
@@ -55,7 +55,7 @@
         .mapToDouble(CartItem::getTotal)
         .sum();
 ```
-  The filter operation is used to retain only those elements (CartItems) whose CartItemState is equal to BUY_NOW. Total Prices will store into buyItemsTotalPrice.
+ // The filter operation is used to retain only those elements (CartItems) whose CartItemState is equal to BUY_NOW. Total Prices will store into buyItemsTotalPrice.
 ```
     Cart cart = new Cart();
     cart.setCartId(cartId);
@@ -63,5 +63,5 @@
     cart.setItems(cartItems);
     return cart;
 ```
-Finally, the method returns the populated cart object, providing a summary of the shopping cart, including the cartId, total price, and the list of items.
+//Finally, the method returns the populated cart object, providing a summary of the shopping cart, including the cartId, total price, and the list of items.
   

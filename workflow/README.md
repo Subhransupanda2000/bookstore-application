@@ -9,7 +9,7 @@
 service layer:
  * Cart getCartSummary(Long cartId);
 * The method signature Cart getCartSummary(Long cartId); indicates a method named getCartSummary that takes a Long parameter cartId and returns a Cart object.
-# serviceimpl:
+# serviceimpl layer:
  @Override
   public Cart getCartSummary(Long cartId) {
     return getCartSummary(cartId, null);

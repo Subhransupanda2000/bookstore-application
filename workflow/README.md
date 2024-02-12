@@ -10,7 +10,7 @@
 * This declares a public method named getCartSummary that takes no parameters and returns a Cart object.
 # service layer:
 ```
- * Cart getCartSummary(Long cartId);
+ Cart getCartSummary(Long cartId);
 ```
 * The method signature Cart getCartSummary(Long cartId); indicates a method named getCartSummary that takes a Long parameter cartId and returns a Cart object.
 # CartItemServiceImpl:

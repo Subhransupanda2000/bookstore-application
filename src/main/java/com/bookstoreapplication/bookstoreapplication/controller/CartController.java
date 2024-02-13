@@ -1,7 +1,7 @@
-package com.bookstoreapplication.bookstoreapplication.user.cart.cartController;
+package com.bookstoreapplication.bookstoreapplication.controller;
 
-import com.bookstoreapplication.bookstoreapplication.user.cart.cartservice.CartService;
-import com.bookstoreapplication.bookstoreapplication.user.cart.models.Cart;
+import com.bookstoreapplication.bookstoreapplication.service.CartService;
+import com.bookstoreapplication.bookstoreapplication.models.Cart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,10 +16,7 @@ public class CartController {
     {
         return cartService.addItemToCart(cart);
     }
-    @GetMapping
-    public List<Cart> getCartList() {
-        return cartService.getCartList();
-    }
+
     @GetMapping
     public Cart getCartById(@PathVariable("cartItemId") long cartItemId) {
         Cart cart = cartService.getCartById(cartItemId);

@@ -181,7 +181,7 @@ public class AuthenticationFilter implements Filter {
 
   }
 ```
-* Checks if the requested URI matches any of the patterns that should bypass authentication. If so, the filter chain is continued without performing authentication.
+* It Checks if the requested URI matches any of the patterns that should bypass authentication. If so, the filter chain is continued without performing authentication.
 * If the URI doesn't match the bypass patterns, it tries to set the user context using the setUserContext method. If successful, the filter chain is continued.
 
 ```

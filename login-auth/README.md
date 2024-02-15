@@ -162,4 +162,41 @@ public class AuthenticationFilter implements Filter {
   }
 }
 ```
- 
+# AuthenticationFilter
+```
+  @Override
+  public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+    HttpServletRequest request = (HttpServletRequest) servletRequest;
+    log.info("filter executed for url: {}", request.getRequestURL());
+    log.info("filter executed for uri: {}", request.getRequestURI());
+    if (matchUriPattern(request.getRequestURI())) {
+      filterChain.doFilter(servletRequest, servletResponse);
+      return;
+    }
+    HttpServletResponse response = (HttpServletResponse) servletResponse;
+    boolean userContext = setUserContext(request, response);
+    if(userContext) {
+      filterChain.doFilter(servletRequest, servletResponse);
+    }
+
+  }
+```
+* Checks if the requested URI matches any of the patterns that should bypass authentication. If so, the filter chain is continued without performing authentication.
+* If the URI doesn't match the bypass patterns, it tries to set the user context using the setUserContext method. If successful, the filter chain is continued.
+
+```
+  private boolean setUserContext(HttpServletRequest request, HttpServletResponse response) {
+    String token = request.getHeader(X_AUTH_TOKEN);
+    try {
+      authService.setUserContext(token);
+      return true;
+    } catch (AppRuntimeException e) {
+      log.error("error while setting user context: ", e);
+      response.setStatus(HttpStatus.UNAUTHORIZED.value());
+    }
+    return false;
+  }
+}
+
+```
+* This method extracts the authentication token from the request header and attempts to set the user context using the AuthService. If successful, it returns true. If an exception occurs (likely due to an invalid token), it logs an error and sets the response status to UNAUTHORIZED. It returns false in this case. 

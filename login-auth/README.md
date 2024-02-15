@@ -1,5 +1,5 @@
 # UserController
-```
+```java
  @PostMapping("/login")
   public Token authenticate(@RequestBody User user){
     String tokenValue = userService.authenticate(user);

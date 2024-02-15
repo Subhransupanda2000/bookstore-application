@@ -199,4 +199,31 @@ public class AuthenticationFilter implements Filter {
 }
 
 ```
-* This method extracts the authentication token from the request header and attempts to set the user context using the AuthService. If successful, it returns true. If an exception occurs (likely due to an invalid token), it logs an error and sets the response status to UNAUTHORIZED. It returns false in this case. 
+* This method extracts the authentication token from the request header and attempts to set the user context using the AuthService. If successful, it returns true. If an exception occurs (likely due to an invalid token), it logs an error and sets the response status to UNAUTHORIZED. It returns false in this case.
+  ```
+   @Override
+  public void setUserContext(String tokenStr) {
+    tokenStr = StringUtils.isEmpty(tokenStr) ? StringUtils.EMPTY : AppUtils.getDecodedString(tokenStr);
+    AuthenticationContext context = authCacheClient.get(tokenStr);
+
+    if(context == null){
+      log.warn("authentication is null for token: {}", tokenStr);
+      throw new AppRuntimeException("authentication context is empty");
+    }
+
+    if(System.currentTimeMillis() > context.getExpiryAt()){
+      log.warn("authentication expired for user: {}", context.getUserId());
+      throw new AppRuntimeException("token expired");
+    }
+
+    userContextService.setUser(context.getUser());
+    log.info("user context set for user: {}", context.getUser());
+  }
+  ```
+  * Decode the token string using AppUtils.getDecodedString() and handle empty strings.
+  * Then Retrieve the authentication context from the cache based on the decoded token.
+  * Then it Check if the authentication context is null. It will throw uthentication context is empty.
+  * if the token has expired by comparing the current time with the expiry time in the context then it will throw  oken expired.
+  * Else it Set the user context using the user from the authentication context.
+  * Log information about the successful setting of the user context
+

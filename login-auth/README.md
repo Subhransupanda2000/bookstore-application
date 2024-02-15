@@ -8,6 +8,7 @@
     return token;
   }
 ```
+* Using login url we will enter into controller layer .In this layer we will get tokenvalue by calling authenticate method from userService and the we will return token value here.
 # UserService
 ```
  @Override
@@ -26,6 +27,7 @@
     throw new AppRuntimeException("login failed");
   }
 ```
+* In this userservice we will authenticate the user it means the email and password that user enter while login we will check those credintials are valid or not.
 # AuthService
 ```
 public interface AuthService {
@@ -46,6 +48,7 @@ public interface AuthService {
     authCacheClient.put(context.getHeaderTokenUUID(), context);
     return AppUtils.getEncodedString(context.getHeaderTokenUUID());
   }
+After validation of user a new authenticate context will create and we will set email token,expiry and we will store those credentials in cache.At the end a token will return as string.
 
 ```
 # AppUtills

@@ -48,9 +48,10 @@ public interface AuthService {
     authCacheClient.put(context.getHeaderTokenUUID(), context);
     return AppUtils.getEncodedString(context.getHeaderTokenUUID());
   }
+```
 After validation of user a new authenticate context will create and we will set email token,expiry and we will store those credentials in cache.At the end a token will return as string.
 
-```
+
 # AppUtills
 ```
  public static String getEncodedString(String rawStr){
